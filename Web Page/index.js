@@ -5,8 +5,8 @@ const ctx = canvas.getContext('2d');
 const canvasOffsetX = canvas.offsetLeft;
 const canvasOffsetY = canvas.offsetTop;
 
-canvas.width = window.innerWidth - canvasOffsetX;
-canvas.height = window.innerHeight - canvasOffsetY;
+canvas.width = 400;
+canvas.height =400;
 
 let isPainting = false;
 let lineWidth = 5;
@@ -19,16 +19,16 @@ toolbar.addEventListener('click', e => {
     }
 });
 
-toolbar.addEventListener('change', e => {
-    if(e.target.id === 'stroke') {
-        ctx.strokeStyle = e.target.value;
-    }
+// toolbar.addEventListener('change', e => {
+//     if(e.target.id === 'stroke') {
+//         ctx.strokeStyle = e.target.value;
+//     }
 
-    if(e.target.id === 'lineWidth') {
-        lineWidth = e.target.value;
-    }
+//     if(e.target.id === 'lineWidth') {
+//         lineWidth = e.target.value;
+//     }
     
-});
+// });
 
 const draw = (e) => {
     if(!isPainting) {
